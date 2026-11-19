@@ -1,0 +1,1425 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>九色影视官网 - 品牌影视内容平台,光影里的品质故事</title>
+<meta name="description" content="九色影视官方网站，专注原创影视内容与创作者社区的影视品牌平台，提供高清正版影像作品、幕后故事与行业观察，持续打造值得信赖的内容生态。">
+<meta name="keywords" content="九色影视官网,九色影视,影视品牌,原创影视,创作者社区,精品内容">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1424'/%3E%3Ccircle cx='24' cy='24' r='9' fill='%23ffb648'/%3E%3Ccircle cx='42' cy='24' r='9' fill='%23ff5f6d'/%3E%3Ccircle cx='24' cy='42' r='9' fill='%234fd1c5'/%3E%3Ccircle cx='42' cy='42' r='9' fill='%237b8cff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --js-night:#0f1424;
+  --js-night-2:#171d33;
+  --js-night-3:#202741;
+  --js-ink:#e9ecf7;
+  --js-muted:#9aa3bd;
+  --js-amber:#ffb648;
+  --js-coral:#ff5f6d;
+  --js-teal:#4fd1c5;
+  --js-violet:#7b8cff;
+  --js-line:rgba(255,255,255,.09);
+  --js-radius:16px;
+  --js-shadow:0 18px 40px rgba(0,0,0,.38);
+  --js-sticky-h:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--js-sticky-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--js-night);
+  color:var(--js-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.js-wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ===== sticky group: notice + header ===== */
+.js-sticky-group{position:sticky;top:0;z-index:80}
+.js-notice{
+  background:linear-gradient(90deg,var(--js-violet),var(--js-coral) 55%,var(--js-amber));
+  color:#11162a;font-size:13px;font-weight:600;
+}
+.js-notice-inner{display:flex;align-items:center;gap:14px;padding:8px 0;overflow:hidden}
+.js-notice-badge{
+  flex:none;background:#11162a;color:#ffd479;border-radius:999px;
+  padding:2px 10px;font-size:11px;letter-spacing:.08em;
+}
+.js-notice-track{overflow:hidden;white-space:nowrap;flex:1}
+.js-notice-track span{display:inline-block;padding-right:60px;animation:js-marquee 26s linear infinite}
+@keyframes js-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.js-header{background:rgba(15,20,36,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--js-line)}
+.js-header-inner{display:flex;align-items:center;gap:24px;padding:14px 0}
+.js-logo{display:flex;align-items:center;gap:11px;flex:none}
+.js-logo-mark{width:38px;height:38px;flex:none}
+.js-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.js-logo-text strong{font-size:19px;letter-spacing:.04em}
+.js-logo-text small{font-size:11px;color:var(--js-muted);letter-spacing:.22em}
+.js-nav{display:flex;gap:6px;flex-wrap:wrap;margin-left:8px}
+.js-nav a{
+  font-size:14px;color:var(--js-muted);padding:7px 12px;border-radius:9px;
+  transition:.22s;white-space:nowrap;
+}
+.js-nav a:hover,.js-nav a.is-active{color:#fff;background:rgba(255,255,255,.07)}
+.js-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.js-search{position:relative;display:flex;align-items:center}
+.js-search input{
+  width:210px;background:var(--js-night-2);border:1px solid var(--js-line);
+  border-radius:999px;padding:9px 40px 9px 16px;color:var(--js-ink);font-size:13px;outline:none;transition:.25s;
+}
+.js-search input:focus{border-color:var(--js-teal);width:240px;box-shadow:0 0 0 3px rgba(79,209,197,.16)}
+.js-search button{
+  position:absolute;right:5px;width:30px;height:30px;border-radius:50%;
+  background:var(--js-teal);color:#0f1424;font-size:14px;display:grid;place-items:center;
+}
+.js-search-tip{
+  position:absolute;top:46px;right:0;width:280px;background:var(--js-night-3);
+  border:1px solid var(--js-line);border-radius:12px;padding:9px;font-size:12.5px;
+  color:var(--js-muted);display:none;box-shadow:var(--js-shadow);z-index:20;
+}
+.js-search-tip.show{display:block}
+.js-btn{
+  display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:999px;
+  font-size:14px;font-weight:600;transition:.24s;white-space:nowrap;
+}
+.js-btn-primary{background:linear-gradient(120deg,var(--js-amber),var(--js-coral));color:#181226}
+.js-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,95,109,.28)}
+.js-btn-ghost{border:1px solid rgba(255,255,255,.22);color:var(--js-ink)}
+.js-btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--js-teal)}
+.js-burger{display:none;width:40px;height:38px;border-radius:10px;border:1px solid var(--js-line);place-items:center}
+.js-burger span{display:block;width:18px;height:2px;background:var(--js-ink);margin:3px 0;transition:.25s}
+.js-burger.open span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.js-burger.open span:nth-child(2){opacity:0}
+.js-burger.open span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* ===== hero ===== */
+.js-hero{position:relative;padding:64px 0 72px;overflow:hidden}
+.js-hero::before{
+  content:"";position:absolute;width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(circle,rgba(123,140,255,.28),transparent 66%);
+  top:-220px;left:-160px;pointer-events:none;
+}
+.js-hero::after{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,95,109,.20),transparent 66%);
+  bottom:-260px;right:-140px;pointer-events:none;
+}
+.js-hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.js-hero-kicker{
+  display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;
+  color:var(--js-teal);border:1px solid rgba(79,209,197,.35);border-radius:999px;padding:5px 14px;margin-bottom:20px;
+}
+.js-hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--js-teal);animation:js-pulse 1.8s infinite}
+@keyframes js-pulse{50%{opacity:.25}}
+.js-hero h1{
+  font-size:clamp(38px,5.4vw,62px);line-height:1.1;letter-spacing:.02em;
+  background:linear-gradient(115deg,#fff 28%,var(--js-amber) 62%,var(--js-coral));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.js-hero-sub{margin:16px 0 8px;font-size:18px;color:#d7dcf0;font-weight:500}
+.js-hero-desc{color:var(--js-muted);font-size:15px;max-width:560px}
+.js-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 34px}
+.js-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:520px}
+.js-stat b{display:block;font-size:26px;color:var(--js-amber);letter-spacing:.02em}
+.js-stat span{font-size:12.5px;color:var(--js-muted)}
+.js-hero-visual{position:relative}
+.js-hero-frame{
+  position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--js-line);
+  box-shadow:var(--js-shadow);aspect-ratio:16/11;
+}
+.js-hero-frame img{width:100%;height:100%;object-fit:cover}
+.js-hero-frame::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,13,24,.72),transparent 52%);
+}
+.js-hero-play{
+  position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);
+  width:72px;height:72px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.5);
+  backdrop-filter:blur(6px);z-index:3;transition:.25s;
+}
+.js-hero-play:hover{background:var(--js-amber);color:#151226;transform:translate(-50%,-50%) scale(1.07)}
+.js-hero-play svg{width:26px;height:26px;margin-left:3px}
+.js-hero-caption{
+  position:absolute;left:20px;right:20px;bottom:18px;z-index:3;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:12px;font-size:13px;
+}
+.js-hero-caption strong{display:block;font-size:16px}
+.js-hero-caption em{font-style:normal;color:var(--js-amber)}
+.js-hero-float{
+  position:absolute;right:-14px;bottom:-24px;background:var(--js-night-3);
+  border:1px solid var(--js-line);border-radius:14px;padding:12px 16px;
+  box-shadow:var(--js-shadow);font-size:12.5px;color:var(--js-muted);max-width:210px;
+}
+.js-hero-float b{color:var(--js-teal)}
+
+/* ===== section common ===== */
+.js-section{padding:66px 0}
+.js-section-alt{background:var(--js-night-2)}
+.js-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.js-sec-head h2{font-size:clamp(24px,3vw,32px);letter-spacing:.02em}
+.js-sec-head h2::after{
+  content:"";display:block;width:46px;height:3px;border-radius:3px;margin-top:12px;
+  background:linear-gradient(90deg,var(--js-amber),var(--js-coral));
+}
+.js-sec-head p{color:var(--js-muted);font-size:14px;max-width:560px}
+.js-eyebrow{color:var(--js-teal);font-size:12px;letter-spacing:.24em;margin-bottom:8px;display:block}
+
+/* ===== about / keyword essay ===== */
+.js-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.js-about-card{
+  background:linear-gradient(160deg,var(--js-night-3),rgba(32,39,65,.35));
+  border:1px solid var(--js-line);border-radius:var(--js-radius);padding:28px;
+}
+.js-about-card h3{font-size:18px;margin-bottom:14px;color:var(--js-amber)}
+.js-about-card p{color:var(--js-muted);font-size:14.5px;margin-bottom:12px}
+.js-essay p{color:#c3cae0;font-size:15px;margin-bottom:16px;text-align:justify}
+.js-essay h3{font-size:17px;margin:22px 0 10px;color:#fff}
+.js-essay strong{color:var(--js-amber);font-weight:600}
+.js-pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.js-pill{
+  font-size:12.5px;color:var(--js-teal);border:1px solid rgba(79,209,197,.3);
+  border-radius:999px;padding:5px 13px;background:rgba(79,209,197,.07);
+}
+
+/* ===== video cards ===== */
+.js-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.js-video-card{
+  background:var(--js-night-3);border:1px solid var(--js-line);border-radius:var(--js-radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.28s;
+}
+.js-video-card:hover{transform:translateY(-6px);border-color:rgba(255,182,72,.45);box-shadow:var(--js-shadow)}
+.js-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0b0f1c}
+.js-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.js-video-card:hover .js-thumb img{transform:scale(1.06)}
+.js-thumb-tag{
+  position:absolute;left:10px;top:10px;z-index:2;font-size:11px;font-weight:600;
+  background:rgba(15,20,36,.82);border:1px solid rgba(255,255,255,.16);
+  color:var(--js-amber);border-radius:999px;padding:3px 10px;backdrop-filter:blur(4px);
+}
+.js-thumb-play{
+  position:absolute;inset:0;display:grid;place-items:center;z-index:2;opacity:0;transition:.28s;
+  background:linear-gradient(to top,rgba(10,13,24,.6),rgba(10,13,24,.12));
+}
+.js-video-card:hover .js-thumb-play{opacity:1}
+.js-thumb-play span{
+  width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.55);display:grid;place-items:center;backdrop-filter:blur(4px);
+}
+.js-thumb-play svg{width:20px;height:20px;margin-left:2px;fill:#fff}
+.js-thumb-dur{
+  position:absolute;right:10px;bottom:10px;z-index:2;font-size:11px;color:#fff;
+  background:rgba(10,13,24,.8);border-radius:6px;padding:2px 7px;
+}
+.js-video-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.js-video-body h3{font-size:16px;line-height:1.45}
+.js-video-body h3 a:hover{color:var(--js-amber)}
+.js-video-summary{font-size:13px;color:var(--js-muted);flex:1}
+.js-video-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:var(--js-muted)}
+.js-author-mini{display:flex;align-items:center;gap:8px}
+.js-avatar{
+  width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:12px;font-weight:700;color:#121728;
+}
+.js-video-ops{display:flex;gap:12px;border-top:1px solid var(--js-line);padding-top:11px;margin-top:4px}
+.js-op{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--js-muted);transition:.2s;
+}
+.js-op:hover{color:var(--js-amber)}
+.js-op.is-on{color:var(--js-coral)}
+.js-op svg{width:15px;height:15px}
+
+.js-feature-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}
+.js-feature-main{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--js-line);min-height:400px}
+.js-feature-main img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.js-feature-main::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,12,22,.92) 8%,rgba(9,12,22,.15) 62%)}
+.js-feature-copy{position:absolute;left:26px;right:26px;bottom:24px;z-index:3}
+.js-feature-copy h3{font-size:23px;margin-bottom:9px}
+.js-feature-copy p{font-size:13.5px;color:#c9d0e4;margin-bottom:14px;max-width:520px}
+.js-feature-side{display:grid;gap:18px}
+.js-feature-mini{
+  display:grid;grid-template-columns:132px 1fr;gap:14px;background:var(--js-night-3);
+  border:1px solid var(--js-line);border-radius:14px;overflow:hidden;transition:.25s;
+}
+.js-feature-mini:hover{border-color:rgba(123,140,255,.5);transform:translateX(4px)}
+.js-feature-mini .js-thumb{aspect-ratio:4/3;border-radius:0}
+.js-feature-mini-copy{padding:13px 14px 13px 0;display:flex;flex-direction:column;gap:6px}
+.js-feature-mini-copy h4{font-size:14.5px;line-height:1.4}
+.js-feature-mini-copy span{font-size:12px;color:var(--js-muted)}
+
+/* ===== topics ===== */
+.js-topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.js-topic{
+  position:relative;border-radius:var(--js-radius);overflow:hidden;border:1px solid var(--js-line);
+  min-height:230px;display:flex;align-items:flex-end;padding:24px;
+}
+.js-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.js-topic:hover img{transform:scale(1.05)}
+.js-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,13,24,.92),rgba(10,13,24,.18))}
+.js-topic-copy{position:relative;z-index:2}
+.js-topic-copy em{
+  font-style:normal;font-size:11px;letter-spacing:.12em;color:var(--js-amber);
+  border:1px solid rgba(255,182,72,.45);border-radius:999px;padding:2px 10px;
+}
+.js-topic-copy h3{font-size:19px;margin:10px 0 6px}
+.js-topic-copy p{font-size:13px;color:#c3cae0;max-width:420px}
+.js-topic-copy small{display:block;margin-top:9px;font-size:12px;color:var(--js-muted)}
+
+/* ===== creators ===== */
+.js-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.js-creator{
+  background:var(--js-night-3);border:1px solid var(--js-line);border-radius:var(--js-radius);
+  padding:24px 20px;text-align:center;transition:.28s;
+}
+.js-creator:hover{transform:translateY(-6px);border-color:rgba(79,209,197,.45)}
+.js-creator .js-avatar{width:62px;height:62px;font-size:22px;margin:0 auto 14px}
+.js-creator h3{font-size:16px;margin-bottom:5px}
+.js-creator .js-creator-field{font-size:12.5px;color:var(--js-teal);margin-bottom:8px}
+.js-creator p{font-size:12.5px;color:var(--js-muted);min-height:56px}
+.js-creator-stats{display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:12px;color:var(--js-muted)}
+.js-creator-stats b{color:var(--js-amber);display:block;font-size:14px}
+.js-creator-more{margin-top:12px;font-size:12.5px;color:var(--js-violet)}
+.js-creator-more:hover{text-decoration:underline}
+
+/* ===== review ===== */
+.js-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.js-review{
+  background:var(--js-night-3);border:1px solid var(--js-line);border-radius:var(--js-radius);
+  padding:20px;display:flex;flex-direction:column;gap:12px;
+}
+.js-review-head{display:flex;align-items:center;gap:11px}
+.js-review-head b{font-size:14px}
+.js-review-head span{font-size:12px;color:var(--js-muted);display:block}
+.js-review p{font-size:13.5px;color:#c3cae0}
+.js-review .js-stars{color:var(--js-amber);font-size:12.5px;letter-spacing:.14em}
+
+/* ===== faq ===== */
+.js-faq{display:grid;gap:12px}
+.js-faq details{
+  background:var(--js-night-3);border:1px solid var(--js-line);border-radius:12px;padding:16px 20px;transition:.25s;
+}
+.js-faq details[open]{border-color:rgba(255,182,72,.45);background:rgba(255,182,72,.05)}
+.js-faq summary{
+  cursor:pointer;font-size:15px;font-weight:600;list-style:none;display:flex;
+  justify-content:space-between;align-items:center;gap:14px;
+}
+.js-faq summary::-webkit-details-marker{display:none}
+.js-faq summary::after{content:"+";color:var(--js-amber);font-size:19px;transition:.25s}
+.js-faq details[open] summary::after{transform:rotate(45deg)}
+.js-faq p{font-size:13.5px;color:var(--js-muted);padding-top:11px}
+
+/* ===== news timeline ===== */
+.js-news{display:grid;gap:0;border-left:2px solid rgba(255,182,72,.28);margin-left:8px}
+.js-news-item{position:relative;padding:0 0 26px 26px}
+.js-news-item::before{
+  content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--js-night);border:2px solid var(--js-amber);
+}
+.js-news-item time{font-size:12px;color:var(--js-teal);letter-spacing:.06em}
+.js-news-item h3{font-size:15.5px;margin:5px 0}
+.js-news-item p{font-size:13px;color:var(--js-muted)}
+
+/* ===== partners ===== */
+.js-partners{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.js-partner{
+  border:1px dashed rgba(255,255,255,.16);border-radius:12px;padding:20px 10px;text-align:center;
+  font-size:13px;color:var(--js-muted);transition:.25s;
+}
+.js-partner:hover{border-color:var(--js-teal);color:var(--js-ink)}
+
+/* ===== contact / cta ===== */
+.js-cta{
+  border-radius:22px;padding:40px;border:1px solid var(--js-line);
+  background:linear-gradient(120deg,rgba(123,140,255,.18),rgba(255,95,109,.14),rgba(255,182,72,.14));
+  display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;
+}
+.js-cta h2{font-size:clamp(22px,2.8vw,30px);margin-bottom:12px}
+.js-cta p{color:#c8cfe4;font-size:14px;margin-bottom:18px}
+.js-cta-form{display:flex;gap:10px;flex-wrap:wrap}
+.js-cta-form input{
+  flex:1;min-width:170px;background:rgba(10,13,24,.6);border:1px solid var(--js-line);
+  border-radius:10px;padding:11px 14px;color:var(--js-ink);font-size:14px;outline:none;
+}
+.js-cta-form input:focus{border-color:var(--js-teal)}
+.js-contact-list{display:grid;gap:12px;font-size:14px}
+.js-contact-list div{display:flex;gap:10px;align-items:baseline;color:#cfd6ea}
+.js-contact-list span{color:var(--js-muted);font-size:12.5px;flex:none;width:74px}
+
+/* ===== footer ===== */
+.js-footer{background:#0a0e1b;border-top:1px solid var(--js-line);padding:52px 0 24px;margin-top:40px}
+.js-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px}
+.js-footer h4{font-size:14px;margin-bottom:14px;color:#fff}
+.js-footer p,.js-footer li{font-size:13px;color:var(--js-muted);margin-bottom:8px}
+.js-footer a:hover{color:var(--js-amber)}
+.js-footer-bottom{
+  border-top:1px solid var(--js-line);padding-top:20px;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--js-muted);
+}
+
+/* ===== toast ===== */
+.js-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,24px);z-index:200;
+  background:var(--js-night-3);border:1px solid rgba(255,182,72,.5);color:var(--js-ink);
+  padding:11px 22px;border-radius:999px;font-size:13.5px;box-shadow:var(--js-shadow);
+  opacity:0;pointer-events:none;transition:.3s;
+}
+.js-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ===== back to top ===== */
+.js-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;z-index:120;
+  background:linear-gradient(135deg,var(--js-amber),var(--js-coral));color:#151226;
+  display:grid;place-items:center;font-size:18px;box-shadow:var(--js-shadow);
+  opacity:0;pointer-events:none;transform:translateY(12px);transition:.3s;
+}
+.js-top.show{opacity:1;pointer-events:auto;transform:none}
+
+/* ===== modal ===== */
+.js-modal{
+  position:fixed;inset:0;z-index:180;background:rgba(6,9,18,.72);backdrop-filter:blur(4px);
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.js-modal.show{display:flex}
+.js-modal-box{
+  width:min(560px,94vw);background:var(--js-night-3);border:1px solid var(--js-line);
+  border-radius:18px;padding:26px;box-shadow:var(--js-shadow);max-height:82vh;overflow:auto;
+}
+.js-modal-box h3{font-size:19px;margin-bottom:12px}
+.js-modal-box p{font-size:13.5px;color:var(--js-muted);margin-bottom:9px}
+.js-modal-close{
+  float:right;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);
+  display:grid;place-items:center;font-size:15px;
+}
+.js-share-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 4px}
+.js-share-grid button{
+  border:1px solid var(--js-line);border-radius:10px;padding:12px 4px;font-size:12.5px;color:var(--js-ink);
+}
+.js-share-grid button:hover{border-color:var(--js-teal);color:var(--js-teal)}
+
+/* ===== responsive ===== */
+@media (max-width:1020px){
+  .js-hero-grid{grid-template-columns:1fr;gap:34px}
+  .js-about-grid,.js-feature-grid,.js-cta{grid-template-columns:1fr}
+  .js-video-grid{grid-template-columns:repeat(2,1fr)}
+  .js-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .js-review-grid{grid-template-columns:repeat(2,1fr)}
+  .js-partners{grid-template-columns:repeat(3,1fr)}
+  .js-footer-grid{grid-template-columns:1fr 1fr}
+  .js-feature-main{min-height:320px}
+}
+@media (max-width:760px){
+  :root{--js-sticky-h:96px}
+  .js-nav{
+    position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;
+    background:var(--js-night-2);border-bottom:1px solid var(--js-line);
+    padding:12px 4vw 18px;display:none;
+  }
+  .js-nav.open{display:flex}
+  .js-nav a{padding:11px 12px}
+  .js-header-inner{position:relative;flex-wrap:wrap;gap:12px}
+  .js-burger{display:grid}
+  .js-search input{width:140px}
+  .js-search input:focus{width:160px}
+  .js-hero{padding:44px 0 54px}
+  .js-hero-stats{grid-template-columns:repeat(3,1fr);gap:10px}
+  .js-stat b{font-size:21px}
+  .js-video-grid,.js-topic-grid,.js-creator-grid,.js-review-grid{grid-template-columns:1fr}
+  .js-partners{grid-template-columns:repeat(2,1fr)}
+  .js-footer-grid{grid-template-columns:1fr}
+  .js-section{padding:46px 0}
+  .js-hero-float{display:none}
+  .js-cta{padding:26px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- sticky: notice + header -->
+<div class="js-sticky-group">
+  <div class="js-notice">
+    <div class="js-wrap js-notice-inner">
+      <span class="js-notice-badge">最新</span>
+      <div class="js-notice-track">
+        <span>「光影拾年」品牌特辑第 4 期已上线 · 「城市切片」创作者共创挑战报名开放至 11 月 30 日 · 九色影视官方高清素材库新增 128 条镜头素材 · 冬季片单投票结果公布</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="js-header">
+    <div class="js-wrap js-header-inner">
+      <a class="js-logo" href="#js-home" aria-label="九色影视官网首页">
+        <svg class="js-logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#171d33"/>
+          <circle cx="24" cy="24" r="8.5" fill="#ffb648"/>
+          <circle cx="42" cy="24" r="8.5" fill="#ff5f6d" opacity=".92"/>
+          <circle cx="24" cy="42" r="8.5" fill="#4fd1c5" opacity=".92"/>
+          <circle cx="42" cy="42" r="8.5" fill="#7b8cff" opacity=".92"/>
+        </svg>
+        <span class="js-logo-text">
+          <strong>九色影视</strong>
+          <small>JIU SE FILM</small>
+        </span>
+      </a>
+
+      <nav class="js-nav" id="js-nav" aria-label="主导航">
+        <a href="#js-home" class="is-active">首页</a>
+        <a href="#js-feature">焦点影像</a>
+        <a href="#js-videos">热门内容</a>
+        <a href="#js-topics">专题企划</a>
+        <a href="#js-creators">创作者</a>
+        <a href="#js-news">企业动态</a>
+        <a href="#js-faq">帮助</a>
+        <a href="#js-contact">联系</a>
+      </nav>
+
+      <div class="js-header-tools">
+        <div class="js-search">
+          <input type="search" id="js-search-input" placeholder="搜索影片 / 创作者 / 专题" aria-label="站内搜索">
+          <button id="js-search-btn" aria-label="开始搜索">⌕</button>
+          <div class="js-search-tip" id="js-search-tip"></div>
+        </div>
+        <button class="js-burger" id="js-burger" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="js-hero" id="js-home">
+    <div class="js-wrap js-hero-grid">
+      <div>
+        <span class="js-hero-kicker"><i></i>九色影视 · 官方网站</span>
+        <h1>九色影视</h1>
+        <p class="js-hero-sub">让每一段影像，都有被认真对待的颜色</p>
+        <p class="js-hero-desc">
+          九色影视是一家深耕原创影像内容的企业，以品牌官网为窗口，连接创作者、制作团队与真实观众。
+          我们相信影像不只是观看，更是一次次关于人、关于生活的对话。在这里，你能找到高清正版的作品、
+          创作者的第一手幕后、以及正在发生的行业观察。
+        </p>
+        <div class="js-hero-actions">
+          <a class="js-btn js-btn-primary" href="#js-videos">浏览精品内容 →</a>
+          <button class="js-btn js-btn-ghost" data-js-modal="submit">创作者投稿</button>
+          <button class="js-btn js-btn-ghost" data-js-modal="share">分享官网</button>
+        </div>
+        <div class="js-hero-stats">
+          <div class="js-stat"><b data-js-count="12800">12,800+</b><span>原创影像作品</span></div>
+          <div class="js-stat"><b data-js-count="460">460 位</b><span>签约创作者</span></div>
+          <div class="js-stat"><b data-js-count="320">320 万</b><span>社区用户</span></div>
+        </div>
+      </div>
+
+      <div class="js-hero-visual">
+        <div class="js-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 560'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b2240'/%3E%3Cstop offset='0.5' stop-color='%23323e78'/%3E%3Cstop offset='1' stop-color='%235d3a6e'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ffb648'/%3E%3Cstop offset='1' stop-color='%23ff5f6d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='560' fill='url(%23g1)'/%3E%3Ccircle cx='600' cy='130' r='150' fill='%23ffb648' opacity='0.22'/%3E%3Ccircle cx='210' cy='420' r='190' fill='%234fd1c5' opacity='0.16'/%3E%3Cg opacity='0.9'%3E%3Crect x='120' y='300' width='34' height='150' rx='8' fill='%237b8cff'/%3E%3Crect x='170' y='240' width='34' height='210' rx='8' fill='%234fd1c5'/%3E%3Crect x='220' y='180' width='34' height='270' rx='8' fill='%23ffb648'/%3E%3Crect x='270' y='260' width='34' height='190' rx='8' fill='%23ff5f6d'/%3E%3C/g%3E%3Cpath d='M430 460 L610 300 L790 460 Z' fill='url(%23g2)' opacity='0.5'/%3E%3Cpath d='M470 460 L650 340 L830 460 Z' fill='%23ffffff' opacity='0.1'/%3E%3Cg fill='%23ffffff' opacity='0.85'%3E%3Ccircle cx='700' cy='200' r='5'/%3E%3Ccircle cx='740' cy='250' r='3'/%3E%3Ccircle cx='660' cy='255' r='3'/%3E%3Ccircle cx='520' cy='150' r='4'/%3E%3C/g%3E%3Crect x='60' y='60' width='4' height='120' fill='%23ffb648' opacity='0.6'/%3E%3C/svg%3E" alt="九色影视品牌主视觉：深蓝夜色中的光影几何与城市剪影">
+          <button class="js-hero-play" aria-label="播放品牌片">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="js-hero-caption">
+            <div>
+              <strong>品牌特辑 · 光影拾年</strong>
+              <span>九色影视官方发布 · 第 4 期</span>
+            </div>
+            <em>08:42</em>
+          </div>
+        </div>
+        <div class="js-hero-float">
+          本周新增 <b>36</b> 部原创短片，本月共有 <b>7</b> 场创作者线上交流。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / KEYWORD ESSAY ===== -->
+  <section class="js-section js-section-alt" id="js-about">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">ABOUT JIUSE</span>
+          <h2>关于九色影视：一家以内容为根的视频品牌企业</h2>
+        </div>
+        <p>从一支短片到一套完整的内容生态，我们花了九年时间，把“认真做影像”变成可被检索、可被信赖的品牌官网。</p>
+      </div>
+
+      <div class="js-about-grid">
+        <div class="js-about-card">
+          <h3>企业定位</h3>
+          <p>九色影视官方网站定位为原创影像内容平台与创作者社区。企业以品牌化运营、正版高清内容、专业制作流程三件事为核心，长期服务于观众、创作者与品牌合作方。</p>
+          <p>我们不做单纯的内容搬运，而是承担起“内容生态”的组织者角色：从选题策划、拍摄执行、后期调色到上线传播，九色影视都有一支持续运营的团队在推进。</p>
+          <div class="js-pill-row">
+            <span class="js-pill">原创内容</span>
+            <span class="js-pill">正版高清</span>
+            <span class="js-pill">创作者社区</span>
+            <span class="js-pill">品牌故事</span>
+            <span class="js-pill">行业观察</span>
+          </div>
+        </div>
+
+        <div class="js-essay">
+          <h3>九色影视到底是什么</h3>
+          <p>如果把“九色影视官网”这几个字拆开来看，它至少包含三层含义。<strong>第一层是内容</strong>：九色影视是一个以影像作品为基本单位的品牌平台，页面上的每一条内容都对应一部具体作品或一个具体企划，而不是含糊的口号。<strong>第二层是社区</strong>：创作者在这里发布作品、交流方法、参加挑战，观众在这里留下评价、收藏片单、投出自己的一票。<strong>第三层是企业</strong>：作为持续运营的影视企业，九色影视需要把版权、品质、合作、社会责任这些看起来不性感但极其重要的事情，一件件做扎实。</p>
+          <p>我们给自己的要求是“九色”——不是九种颜色的炫技，而是承认影像本身应该是多元的。纪录片有纪录片的分寸，实验短片有实验短片的自由，商业片也该有商业片的完成度。官方在这里扮演的角色，是用统一的品牌标准去承接这种多元，而不是把内容削成同一个样子。</p>
+          <p><strong>在内容方向上</strong>，九色影视围绕日常记录、经验分享、人物访谈、城市探索、创作幕后、行业观察等题材持续产出。我们更愿意把镜头对准那些被匆匆略过的细节：一位老手艺人在工作台前的半小时，一个雨天菜市场的呼吸声，一次拍摄失败后团队的自嘲。这些内容不一定有爆点，但它们构成了一个内容平台真正的厚度，也是九色影视品牌口碑的来处。</p>
+          <p><strong>在创作者生态上</strong>，九色影视长期保持开放：新人有新人通道，成熟创作者有共创企划，企业与品牌方有定制合作入口。平台提供高清素材库、镜头语言课程、剪辑工作流拆解等实用资源，让“想拍”到“拍成”之间的距离变短一点。我们相信，内容生态不是靠签约数量堆出来的，而是靠一批真正愿意把作品打磨好的人，一年一年沉淀出来的。</p>
+          <p><strong>在企业运营层面</strong>，九色影视坚持正版授权、尊重原创署名、明确内容分级与适用范围。我们认为，一个影视品牌值不值得信赖，看的不是首页有多热闹，而是它是否愿意在版权、隐私、未成年人保护这些基础问题上给出稳定答案。官方网站因此也是我们的责任声明窗口：合作方式、投稿规范、内容审核流程、数据使用原则，都在这里公开。</p>
+          <p>最后想说的是，九色影视并不打算做“最大”的那个平台。我们更在意的是，当有人想认真看一部短片、想认真学一个镜头、想认真找到一群同好时，会不会想到打开九色影视官网。如果是，那么这个品牌的存在就有意义。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURE ===== -->
+  <section class="js-section" id="js-feature">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">FOCUS</span>
+          <h2>焦点影像 · 本周编辑推荐</h2>
+        </div>
+        <p>由九色影视编辑部与创作者共同挑选，覆盖品牌故事、城市探索与创作幕后三个方向。</p>
+      </div>
+
+      <div class="js-feature-grid">
+        <article class="js-feature-main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 620'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231d2547'/%3E%3Cstop offset='1' stop-color='%234a2d5e'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ffb648'/%3E%3Cstop offset='1' stop-color='%23ff5f6d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='620' fill='url(%23a)'/%3E%3Ccircle cx='700' cy='160' r='90' fill='%23ffb648' opacity='0.5'/%3E%3Crect x='0' y='430' width='900' height='190' fill='%230f1424' opacity='0.55'/%3E%3Cg stroke='url(%23b)' stroke-width='2' opacity='0.65' fill='none'%3E%3Cpath d='M100 480 Q250 330 400 470 T700 400'/%3E%3Cpath d='M80 520 Q260 400 430 510 T760 450'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='0.75'%3E%3Ccircle cx='180' cy='180' r='4'/%3E%3Ccircle cx='260' cy='120' r='3'/%3E%3Ccircle cx='330' cy='210' r='5'/%3E%3C/g%3E%3Crect x='120' y='250' width='120' height='160' rx='10' fill='%237b8cff' opacity='0.35'/%3E%3Crect x='270' y='300' width='120' height='110' rx='10' fill='%234fd1c5' opacity='0.3'/%3E%3C/svg%3E" alt="九色影视年度品牌特辑《光影拾年》主视觉：夜色中的光带与城市轮廓">
+          <div class="js-feature-copy">
+            <h3>《光影拾年》第 4 期：我们为什么还在拍短片</h3>
+            <p>一部 8 分 42 秒的品牌纪录短片，记录九色影视团队与七位创作者的一次集体回望。从第一次举起相机的笨拙，到能独立完成一支片子的笃定，影像改变了他们看待日常的方式。</p>
+            <a class="js-btn js-btn-primary" href="#js-videos">查看本期企划 →</a>
+          </div>
+        </article>
+
+        <div class="js-feature-side">
+          <article class="js-feature-mini">
+            <div class="js-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231b2340'/%3E%3Ccircle cx='320' cy='70' r='52' fill='%234fd1c5' opacity='0.45'/%3E%3Cpath d='M0 260 L120 150 L230 240 L330 160 L400 220 L400 300 L0 300 Z' fill='%232c3a6b'/%3E%3Cpath d='M0 290 L140 210 L300 280 L400 240 L400 300 L0 300 Z' fill='%230f1424' opacity='0.7'/%3E%3C/svg%3E" alt="城市探索短片《凌晨四点的早市》封面：夜色中的山形轮廓">
+              <span class="js-thumb-dur">06:15</span>
+            </div>
+            <div class="js-feature-mini-copy">
+              <h4>城市探索 · 凌晨四点的早市</h4>
+              <span>创作者：林未 · 城市声音记录</span>
+            </div>
+          </article>
+
+          <article class="js-feature-mini">
+            <div class="js-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23241c33'/%3E%3Cg%3E%3Crect x='70' y='90' width='60' height='120' rx='8' fill='%23ffb648' opacity='0.6'/%3E%3Crect x='150' y='60' width='60' height='150' rx='8' fill='%23ff5f6d' opacity='0.55'/%3E%3Crect x='230' y='110' width='60' height='100' rx='8' fill='%237b8cff' opacity='0.6'/%3E%3C/g%3E%3Ccircle cx='330' cy='230' r='40' fill='%234fd1c5' opacity='0.35'/%3E%3C/svg%3E" alt="创作幕后《一支广告片的 37 次重拍》封面：彩色竖条构成的工作台想象">
+              <span class="js-thumb-dur">11:03</span>
+            </div>
+            <div class="js-feature-mini-copy">
+              <h4>创作幕后 · 一支广告片的 37 次重拍</h4>
+              <span>创作者：九色制作组 · 幕后拆解</span>
+            </div>
+          </article>
+
+          <article class="js-feature-mini">
+            <div class="js-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23161e33'/%3E%3Ccircle cx='120' cy='110' r='55' fill='%23ffffff' opacity='0.1'/%3E%3Ccircle cx='290' cy='180' r='75' fill='%23ffb648' opacity='0.2'/%3E%3Cpath d='M40 240 Q140 160 240 230 T380 200' stroke='%234fd1c5' stroke-width='3' fill='none' opacity='0.8'/%3E%3C/svg%3E" alt="人物访谈《她拍了十年菜市场》封面：柔和光圈与流动的线条">
+              <span class="js-thumb-dur">09:28</span>
+            </div>
+            <div class="js-feature-mini-copy">
+              <h4>人物访谈 · 她拍了十年菜市场</h4>
+              <span>创作者：周昀 · 纪实访谈</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOS ===== -->
+  <section class="js-section js-section-alt" id="js-videos">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">CONTENT</span>
+          <h2>热门内容 · 九色影视本周片单</h2>
+        </div>
+        <p>六部来自不同创作者的作品，涵盖纪实、教学、实验与商业四个方向，均为官方审核后的高清正版内容。</p>
+      </div>
+
+      <div class="js-video-grid">
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">纪实</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23192240'/%3E%3Ccircle cx='380' cy='80' r='58' fill='%23ffb648' opacity='0.35'/%3E%3Cpath d='M0 220 L110 130 L200 200 L300 120 L480 220 L480 270 L0 270 Z' fill='%232b3768'/%3E%3Cpath d='M0 250 L140 190 L280 245 L480 180 L480 270 L0 270 Z' fill='%230d1222' opacity='0.8'/%3E%3C/svg%3E" alt="纪实短片《河边的第一百个清晨》封面：河岸与晨光">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">07:22</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">河边的第一百个清晨</a></h3>
+            <p class="js-video-summary">跟随一位河边晨跑者，用一百天记录同一条河的不同颜色。镜头很静，但情绪一直在流动。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#4fd1c5">林</span>林未</div>
+              <span>12.6 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>2,318</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">教学</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23231b33'/%3E%3Crect x='60' y='70' width='150' height='130' rx='10' fill='%23ff5f6d' opacity='0.45'/%3E%3Crect x='240' y='100' width='180' height='100' rx='10' fill='%237b8cff' opacity='0.4'/%3E%3Ccircle cx='400' cy='60' r='30' fill='%23ffb648' opacity='0.6'/%3E%3Cg stroke='%23ffffff' stroke-width='2' opacity='0.3'%3E%3Cpath d='M80 190 L210 190'/%3E%3Cpath d='M260 180 L410 180'/%3E%3C/g%3E%3C/svg%3E" alt="教学视频《三分钟看懂镜头语言》封面：色块构成的镜头示意">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">03:41</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">三分钟看懂镜头语言：景别、角度与情绪</a></h3>
+            <p class="js-video-summary">把生涩的知识拆成可操作的小步骤，适合刚开始学拍摄的朋友。附带官方素材包下载入口。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#ffb648">陈</span>陈小满</div>
+              <span>8.2 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>1,806</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">实验</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23101a24'/%3E%3Cg opacity='0.85'%3E%3Ccircle cx='120' cy='140' r='70' fill='none' stroke='%234fd1c5' stroke-width='2'/%3E%3Ccircle cx='120' cy='140' r='46' fill='none' stroke='%23ffb648' stroke-width='2'/%3E%3Ccircle cx='120' cy='140' r='22' fill='%23ff5f6d' opacity='0.6'/%3E%3C/g%3E%3Cpath d='M240 60 L440 210' stroke='%237b8cff' stroke-width='2' opacity='0.7'/%3E%3Cpath d='M250 220 L430 50' stroke='%23ffffff' stroke-width='1' opacity='0.25'/%3E%3C/svg%3E" alt="实验短片《一条线的十二种可能》封面：同心圆与交叉线条">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">05:07</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">一条线的十二种可能</a></h3>
+            <p class="js-video-summary">完全用一根线条完成的实验短片，讨论形式与情绪的关系。创作说明写在片尾，值得慢慢看完。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#7b8cff">陆</span>陆一白</div>
+              <span>5.4 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>1,142</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">城市</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b2138'/%3E%3Cg fill='%232f3b6e'%3E%3Crect x='40' y='120' width='50' height='150'/%3E%3Crect x='110' y='80' width='60' height='190'/%3E%3Crect x='190' y='140' width='44' height='130'/%3E%3Crect x='250' y='60' width='70' height='210'/%3E%3Crect x='340' y='110' width='54' height='160'/%3E%3C/g%3E%3Cg fill='%23ffb648' opacity='0.7'%3E%3Crect x='122' y='100' width='10' height='10'/%3E%3Crect x='142' y='130' width='10' height='10'/%3E%3Crect x='266' y='90' width='10' height='10'/%3E%3Crect x='290' y='130' width='10' height='10'/%3E%3C/g%3E%3Ccircle cx='420' cy='70' r='34' fill='%23ff5f6d' opacity='0.5'/%3E%3C/svg%3E" alt="城市探索短片《夜班公交的终点站》封面：夜色中的楼宇与灯光">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">14:56</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">夜班公交的终点站</a></h3>
+            <p class="js-video-summary">跟拍一条夜班线路整整一夜，采访司机、乘客和站台小贩。城市在深夜有自己的表情。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#ff5f6d">郑</span>郑野</div>
+              <span>21.9 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>4,096</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">访谈</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23231f3a'/%3E%3Ccircle cx='160' cy='135' r='66' fill='%23ffb648' opacity='0.28'/%3E%3Ccircle cx='300' cy='135' r='66' fill='%234fd1c5' opacity='0.22'/%3E%3Cpath d='M210 90 Q240 135 210 180' stroke='%23ffffff' stroke-width='2' fill='none' opacity='0.5'/%3E%3Cpath d='M250 90 Q220 135 250 180' stroke='%23ffffff' stroke-width='2' fill='none' opacity='0.5'/%3E%3Crect x='60' y='220' width='360' height='3' fill='%237b8cff' opacity='0.5'/%3E%3C/svg%3E" alt="人物访谈《我们的片场没有主角》封面：双色光晕与对话线条">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">18:30</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">我们的片场没有主角</a></h3>
+            <p class="js-video-summary">一场关于幕后工作人员的圆桌访谈，灯光、场记、收音、剪辑，四个人聊了三个小时。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#4fd1c5">九</span>九色制作组</div>
+              <span>17.3 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>3,260</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="js-video-card">
+          <div class="js-thumb">
+            <span class="js-thumb-tag">商业</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23151d2e'/%3E%3Crect x='100' y='60' width='280' height='150' rx='12' fill='%23212948'/%3E%3Crect x='120' y='80' width='240' height='110' rx='8' fill='%23ffb648' opacity='0.22'/%3E%3Ccircle cx='240' cy='135' r='30' fill='none' stroke='%23ff5f6d' stroke-width='3'/%3E%3Cpath d='M232 122 L256 135 L232 148 Z' fill='%23ff5f6d'/%3E%3Crect x='60' y='235' width='120' height='6' rx='3' fill='%234fd1c5' opacity='0.7'/%3E%3C/svg%3E" alt="商业短片《一个品牌的三分钟自述》封面：屏幕与播放三角">
+            <div class="js-thumb-play"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <span class="js-thumb-dur">03:00</span>
+          </div>
+          <div class="js-video-body">
+            <h3><a href="#js-videos">一个品牌的三分钟自述</a></h3>
+            <p class="js-video-summary">九色影视商单案例：如何在预算有限的情况下，用克制的镜头完成一次真诚的品牌表达。</p>
+            <div class="js-video-meta">
+              <div class="js-author-mini"><span class="js-avatar" style="background:#7b8cff">商</span>九色商单组</div>
+              <span>6.8 万次播放</span>
+            </div>
+            <div class="js-video-ops">
+              <button class="js-op" data-js-like>♥ <b>1,470</b></button>
+              <button class="js-op" data-js-fav>☆ 收藏</button>
+              <button class="js-op" data-js-modal="comment">评论</button>
+              <button class="js-op" data-js-modal="share">分享</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOPICS ===== -->
+  <section class="js-section" id="js-topics">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">SERIES</span>
+          <h2>专题企划 · 正在连载的品牌项目</h2>
+        </div>
+        <p>每个专题都由九色影视官方发起，与创作者共同完成，持续更新中。</p>
+      </div>
+
+      <div class="js-topic-grid">
+        <article class="js-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 400'%3E%3Crect width='700' height='400' fill='%231c2547'/%3E%3Ccircle cx='540' cy='110' r='90' fill='%23ffb648' opacity='0.3'/%3E%3Cpath d='M0 320 Q180 220 360 300 T700 260 L700 400 L0 400 Z' fill='%232f3b6e'/%3E%3C/g%3E%3C/svg%3E" alt="专题企划《城市切片》封面：层叠的城市山形与暖色光点">
+          <div class="js-topic-copy">
+            <em>更新中 · 第 6 期</em>
+            <h3>城市切片</h3>
+            <p>用一分钟的镜头，记录一座城市的某处角落。由九色影视发起，邀请各地创作者共同参与的城市影像计划。</p>
+            <small>已收录 74 部作品 · 共创挑战报名开放中</small>
+          </div>
+        </article>
+
+        <article class="js-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 400'%3E%3Crect width='700' height='400' fill='%23251b36'/%3E%3Cg opacity='0.75'%3E%3Crect x='90' y='170' width='80' height='150' rx='10' fill='%23ff5f6d' opacity='0.5'/%3E%3Crect x='200' y='120' width='80' height='200' rx='10' fill='%23ffb648' opacity='0.45'/%3E%3Crect x='310' y='200' width='80' height='120' rx='10' fill='%234fd1c5' opacity='0.5'/%3E%3Crect x='420' y='140' width='80' height='180' rx='10' fill='%237b8cff' opacity='0.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="专题企划《第一次拍片》封面：四种颜色的竖条排列">
+          <div class="js-topic-copy">
+            <em>更新中 · 第 9 期</em>
+            <h3>第一次拍片</h3>
+            <p>每位成熟创作者都曾经历过糟糕的第一条片子。这个专题只聊失败、复盘和重新开始。</p>
+            <small>已收录 46 部作品 · 每周三更新</small>
+          </div>
+        </article>
+
+        <article class="js-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 400'%3E%3Crect width='700' height='400' fill='%23171f30'/%3E%3Cg stroke='%234fd1c5' stroke-width='2' fill='none' opacity='0.55'%3E%3Cpath d='M60 300 Q200 180 350 280 T640 220'/%3E%3Cpath d='M60 340 Q220 240 380 330 T660 280'/%3E%3C/g%3E%3Ccircle cx='520' cy='120' r='60' fill='%237b8cff' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E" alt="专题企划《幕后十分钟》封面：流动的线条与冷色光斑">
+          <div class="js-topic-copy">
+            <em>已完结 · 全 12 期</em>
+            <h3>幕后十分钟</h3>
+            <p>每期拆解一部短片的完整制作流程，从分镜到调色，适合想系统理解拍摄流程的观众。</p>
+            <small>共 12 部作品 · 附官方素材与脚本下载</small>
+          </div>
+        </article>
+
+        <article class="js-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 400'%3E%3Crect width='700' height='400' fill='%231f1a2b'/%3E%3Ccircle cx='220' cy='150' r='80' fill='%23ffb648' opacity='0.22'/%3E%3Ccircle cx='470' cy='240' r='110' fill='%23ff5f6d' opacity='0.18'/%3E%3Cpath d='M340 60 L360 140 L440 160 L360 180 L340 260 L320 180 L240 160 L320 140 Z' fill='%23ffffff' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E" alt="专题企划《一刻》封面：星形光点与双色光晕">
+          <div class="js-topic-copy">
+            <em>征集中 · 截止 12 月 20 日</em>
+            <h3>一刻</h3>
+            <p>只允许一条镜头、一次开机、不剪辑的影像挑战。我们想看看，一刻钟的准备能换来什么。</p>
+            <small>征集人数 128 人 · 官方提供拍摄场地支持</small>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CREATORS ===== -->
+  <section class="js-section js-section-alt" id="js-creators">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">CREATORS</span>
+          <h2>创作者矩阵 · 九色影视签约与共创伙伴</h2>
+        </div>
+        <p>他们是平台的内容中坚，也是社区里最愿意分享方法的人。</p>
+      </div>
+
+      <div class="js-creator-grid">
+        <article class="js-creator">
+          <div class="js-avatar" style="background:#4fd1c5">林</div>
+          <h3>林未</h3>
+          <p class="js-creator-field">城市纪实 / 声音采集</p>
+          <p>擅长用环境音讲述城市故事，作品节奏缓慢但细节充沛，是九色影视社区里被反复提及的名字。</p>
+          <div class="js-creator-stats">
+            <div><b>84</b>作品</div>
+            <div><b>26.4万</b>粉丝</div>
+          </div>
+          <a class="js-creator-more" href="#js-creators" data-js-creator="林未">查看档案</a>
+        </article>
+
+        <article class="js-creator">
+          <div class="js-avatar" style="background:#ffb648">陈</div>
+          <h3>陈小满</h3>
+          <p class="js-creator-field">拍摄教学 / 器材测评</p>
+          <p>把复杂的拍摄知识讲得通俗易懂，课程系列《三分钟》累计播放超过两百万次。</p>
+          <div class="js-creator-stats">
+            <div><b>136</b>作品</div>
+            <div><b>41.2万</b>粉丝</div>
+          </div>
+          <a class="js-creator-more" href="#js-creators" data-js-creator="陈小满">查看档案</a>
+        </article>
+
+        <article class="js-creator">
+          <div class="js-avatar" style="background:#7b8cff">陆</div>
+          <h3>陆一白</h3>
+          <p class="js-creator-field">实验影像 / 艺术短片</p>
+          <p>偏好极简形式与抽象叙事，作品常被用于影像展览，也愿意把失败过程公开展示。</p>
+          <div class="js-creator-stats">
+            <div><b>52</b>作品</div>
+            <div><b>18.7万</b>粉丝</div>
+          </div>
+          <a class="js-creator-more" href="#js-creators" data-js-creator="陆一白">查看档案</a>
+        </article>
+
+        <article class="js-creator">
+          <div class="js-avatar" style="background:#ff5f6d">郑</div>
+          <h3>郑野</h3>
+          <p class="js-creator-field">人物访谈 / 深度纪录</p>
+          <p>曾用一年时间跟拍三个家庭，擅长在长时间相处中捕捉真实，访谈作品口碑稳健。</p>
+          <div class="js-creator-stats">
+            <div><b>39</b>作品</div>
+            <div><b>22.1万</b>粉丝</div>
+          </div>
+          <a class="js-creator-more" href="#js-creators" data-js-creator="郑野">查看档案</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEW ===== -->
+  <section class="js-section" id="js-review">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">VOICES</span>
+          <h2>用户评价 · 来自社区的真实声音</h2>
+        </div>
+        <p>这些评价来自九色影视社区的用户、创作者与合作方，视角不同，我们原样保留。</p>
+      </div>
+
+      <div class="js-review-grid">
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#4fd1c5">许</span>
+            <div><b>许清和</b><span>社区用户 · 关注两年</span></div>
+          </div>
+          <p class="js-stars">★★★★★</p>
+          <p>最初是因为《夜班公交的终点站》留下来的。九色影视官网的内容不吵，看片的时候不会被一堆弹窗打断，这点很难得。</p>
+        </article>
+
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#ffb648">赵</span>
+            <div><b>赵一川</b><span>自由创作者</span></div>
+          </div>
+          <p class="js-stars">★★★★★</p>
+          <p>投稿流程清楚，反馈也不敷衍。我第一条片被退回时收到了具体的修改建议，这比一句“未通过”有价值得多。</p>
+        </article>
+
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#7b8cff">杨</span>
+            <div><b>杨一诺</b><span>高校影像社团</span></div>
+          </div>
+          <p class="js-stars">★★★★☆</p>
+          <p>把我们社团的作品做了一次专题合集，同学们都很受鼓舞。素材库要是能再多一些夜景素材就更好了。</p>
+        </article>
+
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#ff5f6d">黄</span>
+            <div><b>黄巧</b><span>品牌合作方</span></div>
+          </div>
+          <p class="js-stars">★★★★★</p>
+          <p>合作过一次品牌短片，九色影视的团队在预算内给出了很克制的方案，没有过度包装，最终成片反而更有说服力。</p>
+        </article>
+
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#4fd1c5">罗</span>
+            <div><b>罗叙</b><span>资深影迷</span></div>
+          </div>
+          <p class="js-stars">★★★★☆</p>
+          <p>专题企划做得很认真，《第一次拍片》系列我几乎每期都看。希望之后能多一些老片的修复与访谈内容。</p>
+        </article>
+
+        <article class="js-review">
+          <div class="js-review-head">
+            <span class="js-avatar" style="background:#ffb648">孙</span>
+            <div><b>孙见山</b><span>社区用户 · 半年</span></div>
+          </div>
+          <p class="js-stars">★★★★★</p>
+          <p>页面加载快，评论区氛围也好。作为普通观众，我在这里找到了愿意慢慢看片的感觉。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="js-section js-section-alt" id="js-news">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">NEWS</span>
+          <h2>企业动态 · 九色影视官方发布</h2>
+        </div>
+        <p>关于内容更新、品牌活动与合作进展，所有信息以官方网站发布为准。</p>
+      </div>
+
+      <div class="js-news">
+        <article class="js-news-item">
+          <time>2026-11-16</time>
+          <h3>「城市切片」第六期开放报名，新增两座合作城市</h3>
+          <p>本期共创挑战扩展至更多城市，报名截止 11 月 30 日。报名入口与拍摄规范已发布在官网创作者中心。</p>
+        </article>
+        <article class="js-news-item">
+          <time>2026-11-08</time>
+          <h3>九色影视官方高清素材库完成年度扩充</h3>
+          <p>新增 128 条镜头素材，覆盖城市夜景、自然光、手部特写三类场景，签约创作者可凭账号下载使用。</p>
+        </article>
+        <article class="js-news-item">
+          <time>2026-10-27</time>
+          <h3>品牌特辑《光影拾年》第 4 期上线</h3>
+          <p>本期聚焦七位创作者的十年轨迹，同步发布拍摄手记与幕后花絮，可在专题页完整查看。</p>
+        </article>
+        <article class="js-news-item">
+          <time>2026-10-12</time>
+          <h3>九色影视与三所高校达成影像教学合作</h3>
+          <p>合作将围绕课程共建、学生作品展映与实习通道展开，首批课程预计在下一学期投入使用。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section class="js-section" id="js-partners">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">PARTNERS</span>
+          <h2>合作品牌 · 一起把内容做扎实</h2>
+        </div>
+        <p>我们珍视每一次长期合作，也愿意为合适的项目提供定制化的影像方案。</p>
+      </div>
+      <div class="js-partners">
+        <div class="js-partner">青禾影像器材</div>
+        <div class="js-partner">南岸城市文化中心</div>
+        <div class="js-partner">拾光书店</div>
+        <div class="js-partner">木石设计事务所</div>
+        <div class="js-partner">远山户外</div>
+        <div class="js-partner">知野教育</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="js-section js-section-alt" id="js-faq">
+    <div class="js-wrap">
+      <div class="js-sec-head">
+        <div>
+          <span class="js-eyebrow">FAQ</span>
+          <h2>常见问题 · 投稿与观看指南</h2>
+        </div>
+        <p>如果你还有其他问题，可以通过官网的投稿入口或页面底部的联系方式找到我们。</p>
+      </div>
+
+      <div class="js-faq">
+        <details open>
+          <summary>如何在九色影视官网投稿自己的作品？</summary>
+          <p>点击页面中的“创作者投稿”按钮，填写作品基本信息并上传片源链接即可。我们建议先阅读投稿指南，确认作品时长、画幅与版权声明符合要求，审核周期通常为 5 个工作日。</p>
+        </details>
+        <details>
+          <summary>作品审核没有通过，可以重新提交吗？</summary>
+          <p>可以。退回时我们会给出具体原因，修改后同一作品可以再次提交。若对审核结果有疑问，可在投稿记录页发起复议。</p>
+        </details>
+        <details>
+          <summary>页面上的作品都可以高清播放吗？</summary>
+          <p>站内内容均为官方审核的正版作品，支持高清播放。部分实验短片因原始素材限制，会标注实际清晰度，请在播放前留意说明。</p>
+        </details>
+        <details>
+          <summary>我是品牌方，如何与九色影视合作？</summary>
+          <p>可以通过官网联系入口提交合作需求，说明项目背景、预算区间与期望周期。我们会在一周内回复，并安排对应的商单团队对接。</p>
+        </details>
+        <details>
+          <summary>收藏和点赞的数据会保存吗？</summary>
+          <p>登录状态下会同步保存到你的账号；未登录时仅在本次浏览中保留，刷新页面后重置。这是为了避免在公共设备上留下个人记录。</p>
+        </details>
+        <details>
+          <summary>九色影视社区对评论有什么要求？</summary>
+          <p>我们欢迎具体、真诚的讨论，不欢迎人身攻击、剧透未标注内容与任何形式的广告。违规评论会被折叠，严重者将限制互动权限。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section class="js-section" id="js-contact">
+    <div class="js-wrap">
+      <div class="js-cta">
+        <div>
+          <h2>把你的故事，交给九色影视</h2>
+          <p>无论你手上是一部刚剪完的短片，还是一个只有三行字的想法，我们都愿意听。九色影视官方网站持续接收投稿与合作咨询，也欢迎你留下邮箱，订阅官方片单。</p>
+          <form class="js-cta-form" id="js-subscribe">
+            <input type="email" id="js-email" placeholder="留下你的邮箱，获取官方片单" aria-label="订阅邮箱">
+            <button class="js-btn js-btn-primary" type="submit">订阅更新</button>
+          </form>
+          <p class="js-subscribe-tip" id="js-subscribe-tip" style="font-size:12.5px;color:#9aa3bd;margin-top:10px;"></p>
+        </div>
+        <div class="js-contact-list">
+          <div><span>投稿邮箱</span> create@jiuse-film.example</div>
+          <div><span>合作咨询</span> partner@jiuse-film.example</div>
+          <div><span>媒体联络</span> press@jiuse-film.example</div>
+          <div><span>办公地址</span> 九色影视品牌中心 · 城市文化园区 B 座</div>
+          <div><span>工作时间</span> 周一至周五 10:00 - 19:00</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="js-footer">
+  <div class="js-wrap">
+    <div class="js-footer-grid">
+      <div>
+        <h4>九色影视</h4>
+        <p>九色影视官方网站 · 原创影像内容平台与创作者社区。以正版高清内容为基础，持续建设值得信赖的内容生态。</p>
+        <p style="margin-top:10px;color:#4fd1c5;">让每一段影像，都有被认真对待的颜色。</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#js-home">首页</a></li>
+          <li><a href="#js-feature">焦点影像</a></li>
+          <li><a href="#js-videos">热门内容</a></li>
+          <li><a href="#js-topics">专题企划</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <ul>
+          <li><a href="#js-creators">创作者矩阵</a></li>
+          <li><a href="#js-news">企业动态</a></li>
+          <li><a href="#js-faq">投稿指南</a></li>
+          <li><a href="#js-contact">合作联系</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌声明</h4>
+        <ul>
+          <li>原创内容 · 正版授权</li>
+          <li>尊重署名 · 规范审核</li>
+          <li>持续运营 · 用户至上</li>
+          <li>九色影视 官方发布</li>
+        </ul>
+      </div>
+    </div>
+    <div class="js-footer-bottom">
+      <span>© 2026 九色影视官方网站 版权所有 · 内容未经授权请勿转载</span>
+      <span>品牌备案编号：JSFILM-2026-0119 · 持续运营中</span>
+    </div>
+  </div>
+</footer>
+
+<!-- toast -->
+<div class="js-toast" id="js-toast" role="status" aria-live="polite"></div>
+
+<!-- back to top -->
+<button class="js-top" id="js-top" aria-label="回到顶部">↑</button>
+
+<!-- modal -->
+<div class="js-modal" id="js-modal" role="dialog" aria-modal="true" aria-labelledby="js-modal-title">
+  <div class="js-modal-box">
+    <button class="js-modal-close" id="js-modal-close" aria-label="关闭">✕</button>
+    <div id="js-modal-content"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('js-toast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* mobile nav */
+  var burger = document.getElementById('js-burger');
+  var nav = document.getElementById('js-nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* active nav on scroll */
+  var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY + 150;
+    var idx = 0;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= y) idx = i;
+    });
+    navLinks.forEach(function(a, i){ a.classList.toggle('is-active', i === idx); });
+    document.getElementById('js-top').classList.toggle('show', window.scrollY > 520);
+  }, {passive:true});
+
+  /* back to top */
+  document.getElementById('js-top').addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* search */
+  var searchInput = document.getElementById('js-search-input');
+  var searchTip = document.getElementById('js-search-tip');
+  var searchData = ['城市切片','第一次拍片','夜班公交的终点站','林未','陈小满','镜头语言教学','光影拾年','幕后十分钟'];
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchTip.innerHTML = '试试搜索：城市切片、镜头语言、林未';
+      searchTip.classList.add('show');
+      return;
+    }
+    var hit = searchData.filter(function(item){ return item.indexOf(q) > -1; });
+    if(hit.length){
+      searchTip.innerHTML = '找到 ' + hit.length + ' 条相关内容：<br>' + hit.map(function(h){ return '· ' + h; }).join('<br>');
+    }else{
+      searchTip.innerHTML = '暂未找到「' + q.replace(/</g,'&lt;') + '」相关内容，可尝试更短的关键词，或通过投稿入口告诉我们。';
+    }
+    searchTip.classList.add('show');
+  }
+  document.getElementById('js-search-btn').addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()) searchTip.classList.remove('show');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.js-search')) searchTip.classList.remove('show');
+  });
+
+  /* like / fav */
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-js-like]');
+    if(like){
+      var b = like.querySelector('b');
+      var num = parseInt(b.textContent.replace(/,/g,''), 10) || 0;
+      if(like.classList.toggle('is-on')){
+        num += 1;
+        b.textContent = num.toLocaleString('en-US');
+        toast('已点赞，感谢你的支持');
+      }else{
+        num -= 1;
+        b.textContent = num.toLocaleString('en-US');
+        toast('已取消点赞');
+      }
+      return;
+    }
+    var fav = e.target.closest('[data-js-fav]');
+    if(fav){
+      var on = fav.classList.toggle('is-on');
+      fav.innerHTML = on ? '♥ 已收藏' : '☆ 收藏';
+      toast(on ? '已加入我的片单' : '已从片单移除');
+    }
+  });
+
+  /* modal */
+  var modal = document.getElementById('js-modal');
+  var modalContent = document.getElementById('js-modal-content');
+  var modalClose = document.getElementById('js-modal-close');
+
+  function openModal(type, name){
+    var html = '';
+    if(type === 'comment'){
+      html = '<h3 id="js-modal-title">留下你的评论</h3>' +
+        '<p>九色影视鼓励具体、真诚的讨论。评论会在审核后展示。</p>' +
+        '<textarea id="js-comment-text" rows="4" placeholder="说说这部作品打动你的地方…" style="width:100%;margin-top:10px;background:#0f1424;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;color:#e9ecf7;font-size:14px;resize:vertical;outline:none;"></textarea>' +
+        '<div style="margin-top:14px;text-align:right;"><button class="js-btn js-btn-primary" id="js-comment-send">提交评论</button></div>';
+    }else if(type === 'share'){
+      html = '<h3 id="js-modal-title">分享九色影视官网</h3>' +
+        '<p>把好内容分享给同样喜欢影像的人。</p>' +
+        '<div class="js-share-grid">' +
+        '<button data-js-share="wechat">微信</button>' +
+        '<button data-js-share="weibo">微博</button>' +
+        '<button data-js-share="qq">QQ</button>' +
+        '<button data-js-share="link">复制链接</button>' +
+        '</div>' +
+        '<p style="margin-top:12px;font-size:12px;">当前页面链接可直接复制，粘贴到聊天窗口即可。</p>';
+    }else if(type === 'submit'){
+      html = '<h3 id="js-modal-title">创作者投稿</h3>' +
+        '<p>填写作品基本信息，官方编辑部会在 5 个工作日内给出反馈。</p>' +
+        '<input id="js-submit-name" placeholder="作品名称" style="width:100%;margin-top:12px;background:#0f1424;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:11px 14px;color:#e9ecf7;font-size:14px;outline:none;">' +
+        '<input id="js-submit-author" placeholder="创作者昵称" style="width:100%;margin-top:10px;background:#0f1424;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:11px 14px;color:#e9ecf7;font-size:14px;outline:none;">' +
+        '<textarea id="js-submit-desc" rows="3" placeholder="一句话介绍你的作品…" style="width:100%;margin-top:10px;background:#0f1424;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:11px 14px;color:#e9ecf7;font-size:14px;resize:vertical;outline:none;"></textarea>' +
+        '<div style="margin-top:14px;text-align:right;"><button class="js-btn js-btn-primary" id="js-submit-send">提交作品</button></div>';
+    }else if(type === 'creator'){
+      html = '<h3 id="js-modal-title">' + (name || '创作者') + ' · 创作者档案</h3>' +
+        '<p>九色影视签约 / 共创创作者。作品以真实、克制、注重细节著称，长期参与平台专题企划与共创挑战。</p>' +
+        '<p style="margin-top:10px;">擅长领域：城市纪实、人物访谈、创作幕后。官方主页收录其全部公开作品与拍摄手记。</p>' +
+        '<div style="margin-top:16px;text-align:right;"><button class="js-btn js-btn-ghost" id="js-creator-follow">关注该创作者</button></div>';
+    }else if(type === 'report'){
+      html = '<h3 id="js-modal-title">反馈与举报</h3>' +
+        '<p>如发现内容违规、版权问题或其他异常，请在此说明，我们会在核实后处理。</p>' +
+        '<textarea rows="3" placeholder="请描述你遇到的问题…" style="width:100%;margin-top:12px;background:#0f1424;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px;color:#e9ecf7;font-size:14px;resize:vertical;outline:none;"></textarea>' +
+        '<div style="margin-top:14px;text-align:right;"><button class="js-btn js-btn-primary" id="js-report-send">提交反馈</button></div>';
+    }
+    modalContent.innerHTML = html;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    bindModalActions();
+  }
+
+  function closeModal(){
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function bindModalActions(){
+    var send = document.getElementById('js-comment-send');
+    if(send) send.addEventListener('click', function(){
+      var t = document.getElementById('js-comment-text').value.trim();
+      if(!t){ toast('请先写下你的评论'); return; }
+      closeModal();
+      toast('评论已提交，审核通过后展示');
+    });
+    var sub = document.getElementById('js-submit-send');
+    if(sub) sub.addEventListener('click', function(){
+      var n = document.getElementById('js-submit-name').value.trim();
+      if(!n){ toast('请填写作品名称'); return; }
+      closeModal();
+      toast('投稿已收到，编辑部会尽快联系你');
+    });
+    var fol = document.getElementById('js-creator-follow');
+    if(fol) fol.addEventListener('click', function(){
+      closeModal();
+      toast('已关注该创作者');
+    });
+    var rep = document.getElementById('js-report-send');
+    if(rep) rep.addEventListener('click', function(){
+      closeModal();
+      toast('反馈已提交，感谢你的帮助');
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-js-modal]');
+    if(trigger){
+      openModal(trigger.getAttribute('data-js-modal'));
+      return;
+    }
+    var creator = e.target.closest('[data-js-creator]');
+    if(creator){
+      e.preventDefault();
+      openModal('creator', creator.getAttribute('data-js-creator'));
+      return;
+    }
+    var shareBtn = e.target.closest('[data-js-share]');
+    if(shareBtn){
+      var kind = shareBtn.getAttribute('data-js-share');
+      if(kind === 'link'){
+        var url = window.location.href;
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(url).then(function(){ toast('链接已复制'); }, function(){ toast('复制失败，请手动复制'); });
+        }else{
+          toast('当前环境不支持自动复制');
+        }
+      }else{
+        var map = {wechat:'微信', weibo:'微博', qq:'QQ'};
+        toast('已唤起' + map[kind] + '分享入口');
+      }
+    }
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* subscribe */
+  document.getElementById('js-subscribe').addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('js-email').value.trim();
+    var tip = document.getElementById('js-subscribe-tip');
+    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!ok){
+      tip.textContent = '邮箱格式似乎不太对，请再检查一下。';
+      tip.style.color = '#ff5f6d';
+      return;
+    }
+    tip.textContent = '订阅成功，官方片单会发送到你的邮箱。';
+    tip.style.color = '#4fd1c5';
+    document.getElementById('js-email').value = '';
+    toast('已订阅九色影视官方片单');
+  });
+
+  /* hero play */
+  var play = document.querySelector('.js-hero-play');
+  if(play) play.addEventListener('click', function(){ toast('品牌特辑即将播放，正在加载片源'); });
+
+  /* number roll-in */
+  var counters = Array.prototype.slice.call(document.querySelectorAll('[data-js-count]'));
+  var done = false;
+  function runCount(){
+    if(done) return;
+    done = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-js-count'), 10);
+      var suffix = el.textContent.indexOf('万') > -1 ? ' 万' : (el.textContent.indexOf('位') > -1 ? ' 位' : '+');
+      var start = 0, step = Math.max(1, Math.floor(target / 34));
+      var t = setInterval(function(){
+        start += step;
+        if(start >= target){
+          start = target;
+          clearInterval(t);
+        }
+        el.textContent = start.toLocaleString('en-US') + suffix;
+      }, 28);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runCount(); });
+    }, {threshold:.4});
+    var statBox = document.querySelector('.js-hero-stats');
+    if(statBox) io.observe(statBox);
+  }else{
+    runCount();
+  }
+
+})();
+</script>
+</body>
+      </html>
